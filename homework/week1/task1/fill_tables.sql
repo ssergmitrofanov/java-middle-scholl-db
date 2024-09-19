@@ -30,7 +30,7 @@ INSERT INTO student10.albums (name, year, genre_id) VALUES
   ('Infinite', 1996,
       (select genre_id
       from music_genres
-      where name = 'Рэп)),
+      where name = 'Рэп')),
   ('Посвящение', 2002,
       (select genre_id
       from music_genres

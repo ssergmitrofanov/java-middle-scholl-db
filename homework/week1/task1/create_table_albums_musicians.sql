@@ -38,20 +38,6 @@ BEGIN
         )
     THEN
         ALTER TABLE student10.albums_musicians ADD foreign key (album_id) REFERENCES student10.albums(album_id);
-    END IF;
-END ';
-
-
-DO '
-BEGIN
-    IF NOT EXISTS (
-            SELECT 1
-            FROM information_schema.table_constraints
-            WHERE lower(table_name) = ''albums_musicians''
-              and lower(table_schema) = ''student10''
-              and lower(constraint_type) = ''foreign key''
-        )
-    THEN
         ALTER TABLE student10.albums_musicians ADD foreign key (musician_id) REFERENCES student10.musicians(musician_id);
     END IF;
 END ';

@@ -38,20 +38,6 @@ BEGIN
         )
     THEN
         ALTER TABLE student10.hw2_orders_books ADD foreign key (order_id) REFERENCES student10.hw2_orders(order_id);
-    END IF;
-END ';
-
-
-DO '
-BEGIN
-    IF NOT EXISTS (
-            SELECT 1
-            FROM information_schema.table_constraints
-            WHERE lower(table_name) = ''hw2_orders_books''
-              and lower(table_schema) = ''student10''
-              and lower(constraint_type) = ''foreign key''
-        )
-    THEN
         ALTER TABLE student10.hw2_orders_books ADD foreign key (book_id) REFERENCES student10.hw2_books(book_id);
     END IF;
 END ';
