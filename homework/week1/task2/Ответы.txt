@@ -1,0 +1,18 @@
+1. Какие вы использовали типы связи (один-ко-многим/один-к-одному/многие-ко-многим)?
+один-ко-многим: hw2_authors - hw2_books
+многие-ко-многим: hw2_books - hw2_orders
+
+2. Какие поля в таблицах являются первичными ключами?
+hw2_authors -> author_id
+hw2_books -> book_id
+hw2_customers -> customer_id
+hw2_orders -> order_id
+hw2_order_statuses -> status_id
+hw2_orders_books -> id
+
+Какие являются внешними ключами?
+
+
+
+3. Какие таблицы являются родительскими?
+Например, hw2_authors родительская для hw2_books

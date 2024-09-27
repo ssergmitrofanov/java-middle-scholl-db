@@ -1,0 +1,23 @@
+1. Какие вы использовали типы связи (один-ко-многим/один-к-одному/многие-ко-многим)?
+один-ко-многим: music_genres - tracks / albums
+один-к-одному: tracks - track_listenings
+многие-ко-многим: albums - musicians / tracks - musicians
+
+2. Какие поля в таблицах являются первичными ключами?
+albums -> album_id
+albums_musicians -> id
+music_genres -> genre_id
+musicians -> musician_id
+track_listenings -> track_id
+tracks -> track_id
+tracks_musicians -> id
+
+Какие являются внешними ключами?
+albums -> genre_id
+albums_musicians -> album_id и musician_id
+track_listenings -> track_id
+tracks -> genre_id
+tracks_musicians -> track_id и musician_id
+
+3. Какие таблицы являются родительскими?
+Например, music_genres родительская для tracks
