@@ -1,0 +1,1 @@
+CREATE INDEX  idx_author_id ON hw3_books (author_id);
